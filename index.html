@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Image 1: Top-Left */
+  .img-top-left {
+    position: absolute;
+    top: 3vh;
+    left: 2vw;
+    width: 9vw;
+    max-width: 180px;
+    height: auto;
+    z-index: 3;
+  }
+
+  /* Image 2: Bottom-Left */
+  .img-bottom-left {
+    position: absolute;
+    bottom: 2.5vh;
+    left: 2vw;
+    width: 9vw;
+    max-width: 180px;
+    height: auto;
+    z-index: 3;
+  }
+
+  /* Image 3: Bottom-Right */
+  .img-bottom-right {
+    position: absolute;
+    bottom: 2.5vh;
+    right: 2vw;
+    width: 9vw;
+    max-width: 180px;
+    height: auto;
+    z-index: 3;
+  }
+
+  /* Web URL Wrapper */
+  .ticker-wrapper {
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 76vw;
+    height: 24vh;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /* Web URL Iframe (2.5x Magnified) */
+  .web-bottom-center {
+    width: 40%;
+    height: 40%;
+    border: none;
+    background: transparent;
+    transform: scale(2.5);
+    transform-origin: bottom center;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Image 1 (Top-Left) -->
+  <img class="img-top-left" src="image1.png" alt="Top Left Logo">
+
+  <!-- Image 2 (Bottom-Left) -->
+  <img class="img-bottom-left" src="image2.png" alt="Bottom Left Logo">
+
+  <!-- Image 3 (Bottom-Right) -->
+  <img class="img-bottom-right" src="image3.png" alt="Bottom Right Logo">
+
+  <!-- External Web URL (Bottom-Center) -->
+  <div class="ticker-wrapper">
+    <iframe class="web-bottom-center" src="https://ccusa-overlay.s.gy/sycamore1" allowtransparency="true"></iframe>
+  </div>
+
+</body>
+</html>
